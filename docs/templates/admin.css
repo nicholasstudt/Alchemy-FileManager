@@ -1,0 +1,219 @@
+/* GLOBAL */
+body {
+ 	font-size: 10pt;
+ 	font-family:  Arial, Helvetica,  Verdana;
+ 	color: black;
+}
+
+select {
+	background-color: white;
+	text-decoration: none;
+ 	font-size: 10pt;
+ 	font-family:  Arial, Helvetica,  Verdana;
+ 	color: black;
+}
+textarea {
+	background-color: white;
+	border: 1px solid black;
+	text-decoration: none;
+ 	font-size: 10pt;
+ 	font-family:  Arial, Helvetica,  Verdana;
+ 	color: black;
+}
+input {
+	background-color: white;
+	border: 1px solid black;
+	text-decoration: none;
+ 	font-size: 10pt;
+ 	font-family:  Arial, Helvetica,  Verdana;
+ 	color: black;
+}
+
+table { 
+	padding: 0px;
+	margin: 0px;
+ 	font-size: 10pt;
+ 	font-family:  Arial, Helvetica,  Verdana;
+ 	color: black;
+} 
+
+td {
+ 	font-size: 10pt;
+ 	font-family:  Arial, Helvetica,  Verdana;
+ 	color: black;
+} 
+
+ul, li {
+ 	font-size: 10pt;
+ 	font-family:  Arial, Helvetica,  Verdana;
+ 	color: black;
+} 
+/* End GLOBAL */
+
+
+/* Generic A */
+a:link, a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #666699; 
+	text-decoration: underline;
+}
+/* End Generic A */
+
+
+/* Generic TABLE */
+table.data {
+	background-color: #E6E6E6;
+	border: 1pt black solid;
+}
+
+td.hdr {
+ 	background-color: #E6E6E6; 
+	width: 15%;
+	text-align: left;
+ 	font-size: 10pt;
+ 	font-family:  Arial, Helvetica,  Verdana;
+ 	color: black;
+}
+
+td.data {
+	background-color: white;
+/*	border-top: 1px solid black; */
+	text-align: left;
+}
+
+td.edata {
+	background-color: white;
+/*	border-top: 1px solid black; */
+	text-align: left;
+	color: red;
+}
+
+td.ldata {
+	background-color: white;
+/*	border-top: 1px solid black; */
+	text-align: left;
+}
+
+td.cdata {
+	background-color: white;
+/*	border-top: 1px solid black; */
+	text-align: center;
+}
+
+td.rdata {
+	background-color: white;
+/*	border-top: 1px solid black; */
+	text-align: right;
+}
+
+td.blank {
+ 	font-size: 10pt;
+ 	font-family:  Arial, Helvetica,  Verdana;
+ 	color: #222222;
+ 	background-color: #FFFFFF;
+}
+/* End Generic TABLE */
+
+
+/* Generic DIV */
+div.hdr {
+ 	background-color: #E6E6E6; 
+	text-align: center;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+ 	font-size: 12pt;
+ 	font-family:  Arial, Helvetica,  Verdana;
+ 	color: black;
+}
+
+div.msg {
+ 	background-color: white; 
+	padding: 10px 5px 5px 2px;
+	text-align: right;
+	font-size: 10pt;
+/*	border-left: 1px solid black; 
+	border-right: 1px solid black; */
+}
+
+div.error {
+	background-color: #E6E6E6; 
+	border-top: 2px solid black;
+	text-align: left;
+	color: red;
+	font-size: 10pt;
+}
+
+div.data {
+ 	background-color: white; 
+/*	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black; */
+}
+
+div.foot {
+ 	background-color: #E6E6E6; 
+	text-align: right;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+/* End Generic DIV */
+
+.hdr {
+	background: #bfbfbf;
+}
+
+.chdr {
+	text-align: center;
+	background: #bfbfbf;
+}
+
+.rhdr {
+	text-align: right;
+	background: #bfbfbf;
+}
+
+.shd {
+	background: #dee;
+}
+
+.cshd {
+	background: #dee;
+	text-align: center;
+}
+
+.rshd {
+	background: #dee;
+	text-align: right;
+}
+
+.dta {
+	background: #fff;
+}
+
+.cdta {
+	background: #fff;
+	text-align: center;
+}
+
+.rdta {
+	background: #fff;
+	text-align: right;
+}
+
+.required {
+	color: red;
+	background: #fff;
+}
+
+ol {
+	overflow: scroll;
+	height: 400px;
+	width: 465;
+}

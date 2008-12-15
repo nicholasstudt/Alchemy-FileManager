@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+			"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	
+<title>
+##PAGE_TITLE##
+</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style type="text/css" media="screen">@import "/css/admin.css";</style>
+<link rel="stylesheet" type="text/css" href="/css/admin.css" />
+
+<style type="text/css" media="screen">
+
+body {
+	margin: 0px;
+	background: #fff;
+	font-size: 12pt;
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a[rel="new"] {
+ 	background: transparent url('/images/stock_graphic-styles-16.png') no-repeat 4px; 
+	padding-left: 21px; 
+}
+
+input[name="submit"] {
+ 	background: transparent url('/images/stock_calc-accept-16.png') no-repeat 4px;
+	padding-left: 21px; 
+}
+
+input[name="cancel"] {
+ 	background: transparent url('/images/stock_calc-cancel-16.png') no-repeat 4px;
+	padding-left: 21px; 
+}
+
+h1 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 0.8em;
+	font-weight: bold;
+	margin: 5px 0 0 0;
+	line-height:1.2em;
+}
+
+h3 {
+	font-weight:bold;
+	font-size: 0.7em;
+	margin:0 0 2px 0;
+}
+
+h4 {
+	font-size: 0.6em;
+	font-weight: normal;
+	margin: 0;
+}
+
+#page {
+	margin: 0px auto;
+	padding: 0;
+	text-align: left;
+}
+
+#header {
+	text-align: left;
+	font-size: 1.8em;
+	font-weight: bold;
+	padding: 5px 10px;
+	margin: 0;
+	color: white;
+	background: #568;
+	border-bottom: 3px solid #9ab;
+}
+
+#content {
+	margin: 0px auto;
+	width: 760px;
+	background: #fff;
+	padding: 10px;
+}
+
+#content h1 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#footer {
+	font-size: .6em;
+	text-align: center;
+	border-top: 1px solid black;	
+}
+
+#nav {
+	font-size: .8em;
+	margin-right: 10px;
+	border-right: 4px #284950 solid;
+	border-bottom: 4px #284950 solid;
+}
+
+#nav ul {
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#nav li {
+	list-style-type: none;
+	display: inline;
+	background: white;
+	padding: 0px;
+	margin: 0px;
+}
+
+div.box {
+	font-size: .8em;
+	border: 1px solid black;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+
+table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0px;
+}
+
+.hdr {
+	background: #bfbfbf;
+}
+                                                                                
+.chdr {
+	background: #bfbfbf;
+	text-align: center;
+}
+                                                                                
+.rhdr {
+	background: #bfbfbf;
+	text-align: right;
+	white-space: nowrap;
+}
+                                                                                
+.shd {
+	background: #dfdfdf;
+}
+                                                                                
+.cshd {
+	background: #dfdfdf;
+	text-align: center;
+}
+
+.rshd {
+	background: #dfdfdf;
+	text-align: right;
+	white-space: nowrap;
+}
+                                                                                
+.dta {
+}
+                                                                                
+.cdta {
+	text-align: center;
+}
+                                                                                
+.rdta {
+	text-align: right;
+	white-space: nowrap;
+}
+
+input, textarea {
+	border: 1px solid #123;
+	padding: 2px;
+	margin: 1px 2px 1px 2px;
+}
+
+img {
+	border: none;
+}
+
+textarea {
+/*	width: 100%; */
+/*	height: 16em; */
+}
+
+/* FormBuilder */
+.form_nav {
+	background-color: #fff;
+	width: 100%;
+	border: 0; 
+	font: 8pt Helvetica,Sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+.form_nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 85%;
+}
+
+.form_nav li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	background-image: none;
+	line-height: normal;
+	text-indent: 0;
+}
+
+.form_nav input {
+	padding: 1px 5px 2px 10px;
+	border: 0;
+	margin: 0;
+	border: solid #000;
+	border-width: 1px 1px 0 1px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+</style>
+
+</head>
+
+<body onload="stripe('results', '#ddf', '#fff');">
+
+<div id="page">
+
+	<h1 id="header">
+		KrKit 
+	</h1>
+
+	<div id="nav">
+		<ul>
+			<li><a href="/admin/fm/directories">FileManager</a></li>
+		</ul>
+	</div>
+
+	<div id="content">
+##BODY_TEXT##
+	</div>
+
+	<div id="footer">
+		Generated for 
+##USER_NAME## 
+		at 
+##STRFTIME=%A, %d %B %Y, %T %Z##
+	</div>
+</div>
+
+
+</body>
+</html>

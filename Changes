@@ -1,0 +1,122 @@
+Revision history for Perl extension Alchemy::FileManager.
+
+ToDo:
+- I'm sure that something will come up...
+
+PerlSetVar:
+
+	## PerlSetVars
+	PerlSetVar  Date_Format
+	PerlSetVar  Time_Format
+	PerlSetVar  DateTime_Format
+  
+	PerlSetVar  FM_DirRoot       "/admin/fm/directories"
+	PerlSetVar  FM_FileRoot      "/admin/fm/files"        #Required
+	PerlSetVar  FM_DirPerm       "2775"
+	PerlSetVar  FM_FilePerm      "664"
+	PerlSetVar  FM_DocRoot       "/var/www/html"
+	PerlSetVar  FM_chmod         "/bin/chmod"
+	PerlSetVar  FM_chgrp         "/bin/chgrp"             
+	PerlSetVar  FM_Group         "web"                    #Required
+  
+	PerlSetVar  FM_Image_URI     "/admin/fm/images"       #Required
+	PerlSetVar  FM_Copy_Image    "copy.jpg"               #Required
+	PerlSetVar  FM_Delete_Image  "delete.jpg"             #Required
+	PerlSetVar  FM_Edit_Image    "edit.jpg"               #Required
+	PerlSetVar  FM_File_Image    "file.jpg"               #Required
+	PerlSetVar  FM_Folder_Image  "folder.jpg"             #Required
+	PerlSetVar  FM_UpDir_Image   "updir.jpg"              #Required
+	PerlSetVar  FM_Upload_Image  "upload.jpg"             #Required
+	PerlSetVar  FM_Dir_Image     "dir.jpg"                #Required
+	PerlSetVar  FM_Text_Image    "text.jpg"               #Required
+
+	PerlSetVar  FM_ShowHidden    "1"
+	
+ChangeLog:
+
+0.28
+	- Code clean up.
+
+0.27 Mon Aug 11 08:51:05 CDT 2008
+	- Copy file would not save changes made during the initial edit.
+	  (Would copy the file and ignore form changes.)
+
+0.26 Sat Jul 26 10:13:23 PST 2008
+	- Corrected extra spaces in text in Files.pm
+
+0.25 Tue Nov 20 13:26:17 CST 2007
+	- move to using "our"
+	- Fixed a bug in having non docroot based file managers.
+	- Cleaned up the init handler.  Moved to _init over _init_app
+	- Deleted the empty cleanup handler. 
+
+0.24 Wed May 31 00:26 2006
+	- Finished updating directories and files modules
+	- Removed validation functionality - more effort than it is worth....
+	  might considering adding a link to w3c's validator... but then again,
+	  maybe not...
+	- Updated all documentation
+	- Pruned/Cleaned tree
+	
+0.23 Mon May 29 20:06 2006
+	- Updated the entire application based on lessons learned over time
+	- Removed dir_exclude and file_exclude, went for hidden/show hidden
+	- Updated all PerlSetVars to use FM_
+	- Deleted Health module, didn't 'fit' and wasn't used
+	- Modified to use File::Find::Rule, cleaner to use
+	- Changed the way permissions are handled, based on PhotoGallery
+	  implementation
+
+0.22 Fri Sep  2 08:55:21 CDT 2005
+	- Updating to the Apache2::* naming convention for mod_perl 2.000001
+
+0.21 Thu Mar 10 22:05:23 MST 2005
+	- Updated and cleaned up code
+
+0.20 Fri Dec 24 11:36:29 CST 2004
+	- Porting to mod_perl 2
+	- Should be ported, need to fix the fileupload once that is worked
+	  out.
+	- Moved to _init_app rather than _init.	
+
+0.10  Sun Nov 14 21:47:53 2004
+	- Added a module for providing disk usage
+
+0.09  Thu Oct 14 23:51:21 2004
+	- Added a module to return server statistics
+
+0.08  Thu Sep 16 23:08:03 2004
+	- Added a module this displays a graphical usage summary of the directories
+
+0.07  Fri Sep 03 21:38:42 2004
+	- fixed files from showing exclude directories in dir list
+
+0.06  Tue Aug 31 17:48:19 2004
+	- made the output for size 'pretty'
+	- removed size from directories....
+
+0.05  Thu Aug 26 21:57:33 2004
+	- fixed copy for non-text files
+	- added help to directory main headers
+	- changed time formatting - may be adding break.... dunno
+	- add tshd to css for top sub-header (for file contents)
+
+0.04  Mon Aug 16 22:10:21 2004
+	- moved tree to FileManager (from CM)
+	- moved Files.pm up to same level as Directories.pm
+	- removed Tidy - just going to work with validation
+	- working on cleanup
+	
+0.03  Fri Aug 13 21:58:44 2004
+	- add functionality for tidy-ing a file with HTML::Tidy
+	- started working on validation using:
+		WebService::Validator::HTML::W3C
+
+0.02  Wen Aug 11 22:45:12 2004
+	- initial release ... it works as expected at this point but
+	  will need cleanup and review
+
+0.01  Fri Aug  6 23:45:18 2004
+	- original version; created by h2xs 1.23 with options
+		-X -A -n FileManager
+

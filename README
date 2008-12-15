@@ -1,0 +1,128 @@
+FileManager version 0.01
+================
+
+The README is used to introduce the module and provide instructions on
+how to install the module, any machine dependencies it may have (for
+example C compilers and installed libraries) and any other information
+that should be provided before the module is installed.
+
+A README file is required for CPAN modules since CPAN extracts the
+README file from a module distribution so that people browsing the
+archive can use it get an idea of the modules uses. It is usually a
+good idea to provide version information here so that people can
+decide whether fixes for the module are worth downloading.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+APACHE
+
+<Perl>
+	#!/usr/bin/perl
+	use Apache2::Request
+	use Apache2::Upload
+	use POSIX qw( strftime )
+	use File::Copy
+	use File::Path
+	use File::Find::Rule
+	use KrKit::Control
+	use KrKit::Handler
+	use KrKit::HTML qw( :all )
+	use KrKit::Validate
+</Perl>
+
+<Location />
+	## PerlSetVars
+	PerlSetVar  Date_Format
+	PerlSetVar  Time_Format
+	PerlSetVar  DateTime_Format
+  
+	PerlSetVar  FM_DirRoot       "/admin/fm/directories"
+	PerlSetVar  FM_FileRoot      "/admin/fm/files"        #Required
+	PerlSetVar  FM_DirPerm       "2775"
+	PerlSetVar  FM_FilePerm      "664"
+	PerlSetVar  FM_DocRoot       "/var/www/html"
+	PerlSetVar  FM_chmod         "/bin/chmod"
+	PerlSetVar  FM_chgrp         "/bin/chgrp"             
+	PerlSetVar  FM_Group         "web"                    #Required
+  
+	PerlSetVar  FM_Image_URI     "/admin/fm/images"       #Required
+	PerlSetVar  FM_Copy_Image    "copy.jpg"               #Required
+	PerlSetVar  FM_Delete_Image  "delete.jpg"             #Required
+	PerlSetVar  FM_Edit_Image    "edit.jpg"               #Required
+	PerlSetVar  FM_File_Image    "file.jpg"               #Required
+	PerlSetVar  FM_Folder_Image  "folder.jpg"             #Required
+	PerlSetVar  FM_UpDir_Image   "updir.jpg"              #Required
+	PerlSetVar  FM_Upload_Image  "upload.jpg"             #Required
+	PerlSetVar  FM_Dir_Image     "dir.jpg"                #Required
+	PerlSetVar  FM_Text_Image    "text.jpg"               #Required
+
+	PerlSetVar  FM_ShowHidden    "1"
+</Location>
+
+<Location /admin/fm/directories >
+	SetHandler	modperl
+
+	PerlSetVar	SiteTitle	"FileManager - "
+	
+	PerlResponseHandler	Alchemy::FileManager::Directories
+</Location>
+
+<Location /admin/fm/files >
+	SetHandler	modperl
+
+	PerlSetVar	Frame		"template;FileManager.tp"
+	
+	PerlResponseHandler	Alchemy::FileManager::Files
+</Location>
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+	mod_perl 2.x
+
+	KrKit
+	POSIX
+	Apache2::Request
+	Apache2::Upload
+	File::Copy
+	File::Path
+	File::Find::Rule
+
+DIRECTORY DATA
+
+With the way this application works - in order to save/manipulate data and 
+still have it so that a regular user has access ... the following is
+suggested:
+  Make the apache web server user a memeber of the group that has access to 
+  the designated directories.
+  The directories need to be group r/w:
+    chmod 0775 <directory_name>
+	or
+	chmod 0775 `find ./ -type d`
+  In order to cause the files/directories created to maintain the permissions,
+  set the sgid bit:
+    chmod g+s <directory_name>
+	or
+	chmod g+s `find ./ -type d`
+It's just a suggestion....
+
+Have fun and good luck - 8)
+
+LAST UPDATED
+	Date: 2006/05/31 20:29:21
+	
+COPYRIGHT AND LICENCE
+
+  Copyright (C) 2006 by Ron Andrews and Nicholas Studt. All Rights Reserved.
+  
+  You may distribute under the terms of either the GNU General Public
+  License or the Artistic License, as specified in the Perl README file.
+
