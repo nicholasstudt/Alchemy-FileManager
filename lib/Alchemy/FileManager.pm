@@ -3,7 +3,7 @@ package Alchemy::FileManager;
 use strict;
 use KrKit::Handler;
 
-our $VERSION = '0.27';
+our $VERSION = '0.28';
 our @ISA = ( 'KrKit::Handler' );
 
 ##-----------------------------------------------------------------##

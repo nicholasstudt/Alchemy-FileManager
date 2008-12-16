@@ -34,7 +34,7 @@ PerlSetVar:
 	
 ChangeLog:
 
-0.28
+0.28 Mon Dec 15 21:31:00 CST 2008
 	- Code clean up.
 
 0.27 Mon Aug 11 08:51:05 CDT 2008
