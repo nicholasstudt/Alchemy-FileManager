@@ -9,7 +9,7 @@ lib/Alchemy/FileManager/Directories.pm
 docs/apache/alchemy-fm_httpd.conf
 docs/apache/alchemy-fm_perl.conf
 docs/templates/admin.css
-docs/templates/default.tp
+docs/templates/FileManager.tp
 docs/icons/fm-logo.gif
 docs/icons/file.gif
 docs/icons/file.jpg
